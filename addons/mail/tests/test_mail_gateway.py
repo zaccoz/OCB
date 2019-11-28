@@ -863,6 +863,8 @@ class TestMailgateway(TestMail):
 
     @mute_logger('odoo.addons.mail.models.mail_thread', 'odoo.models')
     def test_message_process_process_bounce_domain_confusion(self):
+        self.env['ir.config_parameter'].set_param('mail.catchall.domain.strict', True)
+
         """Incoming email: bounce not conflicting with alien domains """
         alien_bounce_partner = self.env['res.partner'].create({
             'name': "Alien bounce address",
@@ -993,6 +995,8 @@ class TestMailgateway(TestMail):
 
     @mute_logger('odoo.addons.mail.models.mail_thread', 'odoo.models')
     def test_message_process_alias_domain_confusion_external(self):
+        self.env['ir.config_parameter'].set_param('mail.catchall.domain.strict', True)
+
         """ Incoming email: write to external address similar to alias: raise as not valid alias """
         with self.assertRaises(ValueError):
             new_groups = self.format_and_process(
@@ -1002,6 +1006,18 @@ class TestMailgateway(TestMail):
                 to='groups@another.domain.com',
                 msg_id='<whatever.JavaMail.diff1@agrolait.com>'
             )
+
+        self.env['ir.config_parameter'].set_param('mail.catchall.domain.strict', '')
+
+        """ Incoming email: write to external address similar to alias: raise as not valid alias """
+        new_groups = self.format_and_process(
+            MAIL_TEMPLATE,
+            subject='Test Subject',
+            email_from='valid.other@gmail.com',
+            to='groups@another.domain.com',
+            msg_id='<whatever.JavaMail.diff2@agrolait.com>'
+        )
+        self.assertEqual(len(new_groups), 1, 'message_process: a new mail.test should have been created')
 
     @mute_logger('odoo.addons.mail.models.mail_thread', 'odoo.models')
     def test_message_process_alias_domain_confusion_no_domain(self):
