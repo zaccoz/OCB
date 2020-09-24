@@ -6,8 +6,8 @@
 # Martin Trigaux, 2017
 # Cozmin Candea <office@terrabit.ro>, 2018
 # Dorin Hongu <dhongu@gmail.com>, 2020
-# Hongu Cosmin <cosmin513@gmail.com>, 2020
 # Foldi Robert <foldirobert@nexterp.ro>, 2020
+# Hongu Cosmin <cosmin513@gmail.com>, 2020
 # 
 msgid ""
 msgstr ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-20 11:58+0000\n"
 "PO-Revision-Date: 2017-09-20 10:16+0000\n"
-"Last-Translator: Foldi Robert <foldirobert@nexterp.ro>, 2020\n"
+"Last-Translator: Hongu Cosmin <cosmin513@gmail.com>, 2020\n"
 "Language-Team: Romanian (https://www.transifex.com/odoo/teams/41243/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1001,7 +1001,7 @@ msgstr ""
 #: code:addons/crm/models/crm_lead.py:381
 #, python-format
 msgid "Boom! Team record for the past 30 days."
-msgstr ""
+msgstr "Boom! Recordul echipei din ultimele 30 de zile."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1086,6 +1086,8 @@ msgstr ""
 #: model:ir.model.fields,help:crm.field_crm_team_use_opportunities
 msgid "Check this box to manage a presales process with opportunities."
 msgstr ""
+"Bifați această casetă pentru a gestiona un proces de prevânzare cu "
+"oportunități."
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_city
@@ -2565,7 +2567,7 @@ msgstr "Pista in comun in Partener Oportunitate"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_maximum_group
 msgid "Maximum of Group of Contacts"
-msgstr ""
+msgstr "Maxim de grup de contacte"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_medium_id
@@ -2910,6 +2912,9 @@ msgid ""
 " ask the Administrator if you need to merge several contacts linked to "
 "existing Journal Items."
 msgstr ""
+"Doar contactul de destinație poate fi legat de articolele din jurnal "
+"existente. Vă rugăm să întrebați administratorul dacă trebuie să îmbinați "
+"mai multe contacte legate de articole de jurnal existente."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
@@ -3508,7 +3513,7 @@ msgstr "Caută oportunități"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.base_partner_merge_automatic_wizard_form
 msgid "Search duplicates based on duplicated data in"
-msgstr ""
+msgstr "Căutați duplicate pe baza datelor duplicate în"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.merge_opportunity_form
