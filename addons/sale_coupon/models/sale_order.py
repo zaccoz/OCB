@@ -44,10 +44,11 @@ class SaleOrder(models.Model):
         return order
 
     def action_confirm(self):
+        res = super().action_confirm()
         self.generated_coupon_ids.write({'state': 'new'})
         self.applied_coupon_ids.write({'state': 'used'})
         self._send_reward_coupon_mail()
-        return super(SaleOrder, self).action_confirm()
+        return res
 
     def action_cancel(self):
         res = super(SaleOrder, self).action_cancel()
