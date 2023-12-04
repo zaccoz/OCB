@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-12 22:04+0000\n"
-"PO-Revision-Date: 2022-01-12 22:04+0000\n"
+"POT-Creation-Date: 2023-12-03 01:17+0000\n"
+"PO-Revision-Date: 2023-12-03 01:17+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -179,8 +179,8 @@ msgid ""
 "Customer Invoice/Credit Note"
 msgstr ""
 "Una descripción del producto que quiera comunicar a sus clientes. Esta "
-"descripción se copiará a cada pedido de venta, albarán de salida y factura "
-"de cliente."
+"descripción se copiará a cada pedido de venta, remito de salida y factura de"
+" cliente."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product__description
@@ -383,7 +383,7 @@ msgid ""
 msgstr ""
 "Precio base para el cálculo.\n"
 "Precio de venta: El precio base será el precio de venta.\n"
-"Precio de coste El precio base será el precio de coste.\n"
+"Precio de costo El precio base será el precio de costo.\n"
 "Otra lista de precios: Cálculo del precio base en base a otra lista de precios."
 
 #. module: product
@@ -501,7 +501,7 @@ msgstr "Compañías"
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo__company_id
 #: model:ir.model.fields,field_description:product.field_product_template__company_id
 msgid "Company"
-msgstr "Compañía"
+msgstr "Empresa"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_category__complete_name
@@ -554,13 +554,13 @@ msgstr "Cantidad contenida"
 #: model:ir.model.fields,field_description:product.field_product_template__standard_price
 #: model:ir.model.fields.selection,name:product.selection__product_pricelist_item__base__standard_price
 msgid "Cost"
-msgstr "Coste"
+msgstr "Costo"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product__cost_currency_id
 #: model:ir.model.fields,field_description:product.field_product_template__cost_currency_id
 msgid "Cost Currency"
-msgstr "Moneda de Coste"
+msgstr "Moneda del costo"
 
 #. module: product
 #: model:ir.model,name:product.model_res_country_group
@@ -991,7 +991,7 @@ msgid ""
 msgstr ""
 "En Standard Price & AVCO: valor del producto (calculado automáticamente en AVCO).\n"
 "En FIFO: valor de la última unidad que salió del stock (calculado automáticamente).\n"
-"Se utiliza para valorar el producto cuando se desconoce el coste de compra (por ejemplo, ajuste de inventario).\n"
+"Se utiliza para valorar el producto cuando se desconoce el costo de compra (por ejemplo, ajuste de inventario).\n"
 "Se utiliza para calcular los márgenes de las órdenes de venta."
 
 #. module: product
@@ -1673,7 +1673,7 @@ msgstr "Unidad de medida del producto"
 #: model:ir.model.fields.selection,name:product.selection__product_pricelist_item__applied_on__0_product_variant
 #: model_terms:ir.ui.view,arch_db:product.product_normal_form_view
 msgid "Product Variant"
-msgstr "Equivalencias de producto"
+msgstr "Productos"
 
 #. module: product
 #: model:ir.actions.act_window,name:product.product_attribute_value_action
@@ -1686,7 +1686,7 @@ msgstr "Equivalencias del producto"
 #: model_terms:ir.ui.view,arch_db:product.product_product_tree_view
 #: model_terms:ir.ui.view,arch_db:product.product_product_view_activity
 msgid "Product Variants"
-msgstr "Equivalencias de producto"
+msgstr "Productos"
 
 #. module: product
 #: code:addons/product/models/product_pricelist.py:0
@@ -1704,7 +1704,7 @@ msgstr "Producto: %s"
 #: model_terms:ir.ui.view,arch_db:product.product_template_view_activity
 #: model_terms:ir.ui.view,arch_db:product.res_config_settings_view_form
 msgid "Products"
-msgstr "Equivalencias de producto"
+msgstr "Productos"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_pricelist_view_search
@@ -2150,6 +2150,18 @@ msgid "This comes from the product form."
 msgstr "Esto proviene del formulario del producto"
 
 #. module: product
+#: code:addons/product/models/product_template.py:0
+#, python-format
+msgid ""
+"This configuration of product attributes, values, and exclusions would lead "
+"to no possible variant. Please archive or delete your product directly if "
+"intended."
+msgstr ""
+"Esta configuración de atributos, valores y exclusiones del producto no "
+"resultará en una variante posible. Bórrela o borre su producto directamente "
+"si así lo desea."
+
+#. module: product
 #: model:ir.model.fields,help:product.field_product_product__price_extra
 msgid "This is the sum of the extra price of all attributes"
 msgstr "Ésta es la suma de los precios extra de todos los atributos"
@@ -2182,6 +2194,9 @@ msgid ""
 "This may cause inconsistencies in computations.\n"
 "Please set a precision between %s and 1."
 msgstr ""
+"La precisión de redondeo es más alta que la precisión decimal (%s dígitos).\n"
+"Esto puede hacer que los cálculos no sean consistentes.\n"
+"Indique una precisión entre %s y 1."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_supplierinfo__product_code
@@ -2459,6 +2474,10 @@ msgid ""
 "This may cause inconsistencies in computations.\n"
 "Please increase the rounding of those units of measure, or the digits of this Decimal Accuracy."
 msgstr ""
+"La precisión decimal que está indicando es menos precisa que la unidad de medida:\n"
+"%s\n"
+"Esto puede hacer que los cálculos no sean consistentes.\n"
+"Aumente el redondeo de esas unidades de medida, o los dígitos de esta precisión decimal."
 
 #. module: product
 #: model_terms:ir.actions.act_window,help:product.product_pricelist_action2
@@ -2553,6 +2572,15 @@ msgid ""
 msgstr ""
 "No puede eliminar el valor %s porque se usa en los siguientes productos:\n"
 "%s"
+
+#. module: product
+#: code:addons/product/models/product_pricelist.py:0
+#, python-format
+msgid ""
+"You cannot disable a pricelist rule, please delete it or archive its "
+"pricelist instead."
+msgstr ""
+"No puede desactivar la regla de lista de precios, bórrela o archívela."
 
 #. module: product
 #: code:addons/product/models/product_attribute.py:0

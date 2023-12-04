@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-12 22:04+0000\n"
-"PO-Revision-Date: 2022-01-12 22:04+0000\n"
+"POT-Creation-Date: 2023-12-03 01:17+0000\n"
+"PO-Revision-Date: 2023-12-03 01:17+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 #: code:addons/delivery/models/sale_order.py:0
 #, python-format
 msgid " (Estimated Cost: %s )"
-msgstr "(Coste estimado: %s )"
+msgstr "(Costo estimado: %s )"
 
 #. module: delivery
 #: model_terms:ir.ui.view,arch_db:delivery.view_quant_package_weight_form
@@ -29,7 +29,7 @@ msgstr "(calculado:"
 #. module: delivery
 #: model_terms:ir.ui.view,arch_db:delivery.choose_delivery_carrier_view_form
 msgid "<i class=\"fa fa-arrow-right mr-1\"/>Get rate"
-msgstr "<i class=\"fa fa-arrow-right mr-1\"/>Obtener tarifa "
+msgstr "<i class=\"fa fa-arrow-right mr-1\"/>Obtener precios"
 
 #. module: delivery
 #: code:addons/delivery/models/delivery_carrier.py:0
@@ -217,7 +217,7 @@ msgstr "Contacto"
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_choose_delivery_carrier__display_price
 msgid "Cost"
-msgstr "Coste"
+msgstr "Costo"
 
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_delivery_carrier__country_ids
@@ -284,7 +284,7 @@ msgstr "Asistente de Selección de Transportista"
 #. module: delivery
 #: model_terms:ir.ui.view,arch_db:delivery.view_delivery_price_rule_form
 msgid "Delivery Cost"
-msgstr "Coste de envío"
+msgstr "Costo de envío"
 
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_choose_delivery_carrier__delivery_message
@@ -347,7 +347,7 @@ msgstr "Entrega Establecida"
 #: model:ir.model.fields,field_description:delivery.field_sale_order__recompute_delivery_price
 #: model:ir.model.fields,field_description:delivery.field_sale_order_line__recompute_delivery_price
 msgid "Delivery cost should be recomputed"
-msgstr "El coste de envío debería ser recalculado"
+msgstr "El costo de envío debería ser recalculado"
 
 #. module: delivery
 #: model_terms:ir.ui.view,arch_db:delivery.view_delivery_carrier_form
@@ -407,13 +407,13 @@ msgid ""
 "Estimated Cost: the customer will be invoiced the estimated cost of the shipping.\n"
 "Real Cost: the customer will be invoiced the real cost of the shipping, the cost of the shipping will be updated on the SO after the delivery."
 msgstr ""
-"Coste estimado: se facturará al cliente el coste estimado de envío.\n"
-"Coste real: se facturará el coste real de envío al cliente. El coste de envío se actualizará en el pedido de venta después del envío."
+"Costo estimado: se facturará al cliente el costo estimado de envío.\n"
+"Costo real: se facturará el costo real de envío al cliente. El costo de envío se actualizará en el pedido de venta después del envío."
 
 #. module: delivery
 #: model:ir.model.fields.selection,name:delivery.selection__delivery_carrier__invoice_policy__estimated
 msgid "Estimated cost"
-msgstr "Coste estimado"
+msgstr "Costo estimado"
 
 #. module: delivery
 #: model:ir.model.fields,help:delivery.field_sale_order__carrier_id
@@ -439,7 +439,7 @@ msgstr "Precio fijo"
 #: code:addons/delivery/models/sale_order.py:0
 #, python-format
 msgid "Free Shipping"
-msgstr "Envío gratis"
+msgstr "Envío sin cargo"
 
 #. module: delivery
 #: model:delivery.carrier,name:delivery.free_delivery_carrier
@@ -452,9 +452,11 @@ msgid "Free if order amount is above"
 msgstr "Gratuito si el importe del pedido es superior a"
 
 #. module: delivery
+#: model:product.product,description_purchase:delivery.product_product_delivery
 #: model:product.product,description_sale:delivery.product_product_delivery
+#: model:product.template,description_purchase:delivery.product_product_delivery_product_template
 #: model:product.template,description_sale:delivery.product_product_delivery_product_template
-msgid "Gastos de envío - Sin cargo"
+msgid "Gastos de envío"
 msgstr ""
 
 #. module: delivery
@@ -465,12 +467,12 @@ msgstr "Generar etiqueta de devolución"
 #. module: delivery
 #: model:ir.model.fields.selection,name:delivery.selection__delivery_carrier__integration_level__rate
 msgid "Get Rate"
-msgstr "Obtener tarifa"
+msgstr "Obtener costos"
 
 #. module: delivery
 #: model:ir.model.fields.selection,name:delivery.selection__delivery_carrier__integration_level__rate_and_ship
 msgid "Get Rate and Create Shipment"
-msgstr "Obtener tarifas y crear envíos"
+msgstr "Obtener costos y crear envíos"
 
 #. module: delivery
 #: model_terms:ir.ui.view,arch_db:delivery.view_delivery_carrier_search
@@ -592,7 +594,7 @@ msgstr "El margen no puede ser inferior a -100%"
 #. module: delivery
 #: model_terms:ir.ui.view,arch_db:delivery.view_delivery_carrier_form
 msgid "Margin on Rate"
-msgstr "Margen en la tarifa"
+msgstr "Margen en la costo"
 
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_product_packaging__max_weight
@@ -630,7 +632,7 @@ msgstr "Sin integración de transportista"
 #, python-format
 msgid "No price rule matching this order; delivery cost cannot be computed."
 msgstr ""
-"Ninguna regla concordante con este pedido; los costes de envío no pueden ser"
+"Ninguna regla concordante con este pedido; los costos de envío no pueden ser"
 " calculados."
 
 #. module: delivery
@@ -746,7 +748,7 @@ msgstr "Cantidad"
 #. module: delivery
 #: model:ir.model.fields.selection,name:delivery.selection__delivery_carrier__invoice_policy__real
 msgid "Real cost"
-msgstr "Coste real"
+msgstr "Costo real"
 
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_stock_picking__return_label_ids
@@ -818,13 +820,13 @@ msgid ""
 "Shipment sent to carrier %s for shipping with tracking number %s<br/>Cost: "
 "%.2f %s"
 msgstr ""
-"Mercancía enviada al transportista %s con identificador %s<br/>Coste: %.2f "
+"Mercancía enviada al transportista %s con identificador %s<br/>Costo: %.2f "
 "%s"
 
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_stock_picking__carrier_price
 msgid "Shipping Cost"
-msgstr "Coste de envío"
+msgstr "Costo de envío"
 
 #. module: delivery
 #: model_terms:ir.ui.view,arch_db:delivery.view_picking_withcarrier_out_form
@@ -952,7 +954,7 @@ msgid ""
 " the weight used to compute the cost of the shipping."
 msgstr ""
 "Peso total de los paquetes y productos que no están en un paquete. Es el "
-"peso utilizado para calcular el coste de envío."
+"peso utilizado para calcular el costo de envío."
 
 #. module: delivery
 #: model:ir.model.fields,help:delivery.field_stock_picking__weight
@@ -987,7 +989,7 @@ msgstr "Seguimiento:"
 #. module: delivery
 #: model:ir.model,name:delivery.model_stock_picking
 msgid "Transfer"
-msgstr "Albarán"
+msgstr "Remito"
 
 #. module: delivery
 #: model:product.product,uom_name:delivery.product_product_delivery
@@ -1005,7 +1007,7 @@ msgstr "Actualizar"
 #: model_terms:ir.ui.view,arch_db:delivery.view_order_form_with_carrier
 #, python-format
 msgid "Update shipping cost"
-msgstr "Actualizar coste de envío"
+msgstr "Actualizar costo de envío"
 
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_delivery_price_rule__variable
@@ -1087,6 +1089,10 @@ msgid ""
 "The following delivery lines (product, invoiced quantity and price) have already been processed:\n"
 "\n"
 msgstr ""
+"¡No puede actualizar los costos de envío de una orden que ya fue facturada!\n"
+"\n"
+"Las siguientes líneas de entrega (producto, cantidad facturada y precio) ya fueron procesadas:\n"
+"\n"
 
 #. module: delivery
 #: model_terms:ir.ui.view,arch_db:delivery.delivery_tracking_url_warning_form
